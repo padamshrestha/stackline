@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-.container {
+.wrapper {
   --spacing: 1 rem;
 
   display: flex;
@@ -36,7 +36,7 @@ body {
   }
 }
 
-.container .sl-head {
+.wrapper .sl-head {
   display: flex;
   flex-basis: 100%;
   grid-area: header;
@@ -44,21 +44,22 @@ body {
   background-color: #fff;
   position: relative;
   padding-left: 1rem;
+  padding-top: 1rem;
 }
 
-.container .sl-nav {
+.wrapper .sl-nav {
   flex: 0 0 $sl-side-nav-width;
   grid-area: nav;
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  margin: 4rem 0rem 3rem 0.5rem;
+  margin: 4rem 0rem 3rem 1rem;
 }
 
 .sl-shadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
-.container .sl-main {
+.wrapper .sl-main {
   flex: 1;
   grid-area: main;
   padding: var(--spacing);
@@ -116,26 +117,31 @@ body {
   }
 }
 
-.logo {
-  display: flex;
-  flex: 0 0 $sl-side-nav-width;
-  height: $sl-header-height;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 0;
-  background-color: #fff;
-  font-size: 1rem;
+.menu {
+  list-style-type: none;
+  padding: 0;
 
-  h1 {
-    margin: 0;
+  &__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+  &__link {
+    display: block;
+    padding: 1rem 2rem;
+    color: #76808f;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: #1f222d;
+    }
   }
 }
 
 .card {
   height: 100%;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 300;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);

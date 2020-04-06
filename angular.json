@@ -25,7 +25,10 @@
               "apps/stackline/src/favicon.ico",
               "apps/stackline/src/assets"
             ],
-            "styles": ["apps/stackline/src/styles.scss"],
+            "styles": [
+              "apps/stackline/src/styles.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss"
+            ],
             "scripts": []
           },
           "configurations": {
